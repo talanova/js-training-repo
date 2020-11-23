@@ -12,6 +12,7 @@ describe("isEmail", () => {
     ["test 8", "@aaaaaaaaaa.aaa", false],
     ["test 9", "@", false],
   ].forEach((test) => {
+    // eslint-disable-next-line jest/valid-title
     it(test[0], () => {
       expect(isEmail(test[1])).toBe(test[2]);
     });

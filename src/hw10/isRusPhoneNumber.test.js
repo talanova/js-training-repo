@@ -16,6 +16,7 @@ describe("isRusPhoneNumber", () => {
     ["test 12", "1234567890", false],
     ["test 13", "+7", false],
   ].forEach((test) => {
+    // eslint-disable-next-line jest/valid-title
     it(test[0], () => {
       expect(isRusPhoneNumber(test[1])).toBe(test[2]);
     });

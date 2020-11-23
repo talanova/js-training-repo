@@ -10,6 +10,7 @@ describe("isDate", () => {
     ["test 6", "some text", false],
     ["test 7", "12345678", false],
   ].forEach((test) => {
+    // eslint-disable-next-line jest/valid-title
     it(test[0], () => {
       expect(isDate(test[1])).toBe(test[2]);
     });
