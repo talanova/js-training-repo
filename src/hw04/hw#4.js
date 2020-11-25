@@ -15,7 +15,7 @@ const currentUser = f41();
 console.log(currentUser);
 
 export function f42(user) {
-  const admin = { ...user, role: "admin"};
+  const admin = { ...user, role: "admin" };
   return admin;
 }
 
