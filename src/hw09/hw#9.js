@@ -14,7 +14,7 @@ function getAreaOfCircle(r) {
 }
 
 export function getCircumferenceAndAreaOfCircle() {
-  const r = +prompt("Enter circle radius:");
+  const r = +window.prompt("Enter circle radius:");
   if (isNaN(r) || r < 0) {
     return;
   }
@@ -36,15 +36,15 @@ function calcQuadraticEquationRoots(a, b, c) {
 }
 
 export function getQuadraticEquationRoots() {
-  const a = +prompt("Enter a coefficient: ");
+  const a = +window.prompt("Enter a coefficient: ");
   if (isNaN(a)) {
     return null;
   }
-  const b = +prompt("Enter a coefficient: ");
+  const b = +window.prompt("Enter a coefficient: ");
   if (isNaN(b)) {
     return null;
   }
-  const c = +prompt("Enter a coefficient: ");
+  const c = +window.prompt("Enter a coefficient: ");
   if (isNaN(c)) {
     return null;
   }

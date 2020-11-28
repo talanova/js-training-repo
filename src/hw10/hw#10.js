@@ -17,7 +17,7 @@ export function isRusPhoneNumber(value) {
 }
 
 export function isDateEmailOrPhoneNumber() {
-  const input = prompt("Enter some text:");
+  const input = window.prompt("Enter some text:");
   if (isDate(input)) {
     console.log(`"${input}" is date`);
   } else if (isEmail(input)) {

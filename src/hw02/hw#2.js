@@ -3,7 +3,7 @@ export function f21(a, b) {
 }
 
 export function f22() {
-  const value = +prompt("Enter a number from 1 to 12:");
+  const value = +window.prompt("Enter a number from 1 to 12:");
   if (isNaN(value) || value < 1 || value > 12) {
     return;
   }
