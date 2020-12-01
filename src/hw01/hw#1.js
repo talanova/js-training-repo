@@ -8,7 +8,7 @@ export function f12(a, b) {
 }
 
 export function f13() {
-  const value = +window.prompt("Enter a three-digit number:");
+  const value = Number(window.prompt("Enter a three-digit number:"));
   if (isNaN(value) || value < 100 || value > 999) {
     return;
   }

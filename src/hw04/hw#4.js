@@ -3,7 +3,7 @@ export function f41() {
     name: "John",
   };
 
-  const age = +window.prompt("Enter user age:");
+  const age = Number(window.prompt("Enter user age:"));
   if (isNaN(age) || age < 0) {
     return null;
   }

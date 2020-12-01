@@ -13,7 +13,7 @@ export function f32() {
 }
 
 export function f33() {
-  const value = +window.prompt("Enter a number greater than 0:");
+  const value = Number(window.prompt("Enter a number greater than 0:"));
   if (isNaN(value) || value < 1) {
     return;
   }
