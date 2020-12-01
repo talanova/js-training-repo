@@ -19,23 +19,8 @@ const secondArr = f52(firstArr);
 console.log(secondArr);
 
 export function f53(arr) {
-  let min = null;
-  let max = null;
-
-  arr.forEach((x) => {
-    if (min === null) {
-      min = x;
-    } else {
-      min = x < min ? x : min;
-    }
-
-    if (max === null) {
-      max = x;
-    } else {
-      max = x > max ? x : max;
-    }
-  });
-  console.log(min, max);
+  arr.sort((x, y) => x - y);
+  console.log(arr.shift(), arr.pop());
 }
 
 f53(firstArr);
