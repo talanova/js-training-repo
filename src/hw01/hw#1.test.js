@@ -33,7 +33,7 @@ describe("f13", () => {
     ["test 3", "999", 27],
   ].forEach((test) => {
     it(test[0], () => {
-      jest.spyOn(window, "prompt").mockImplementation(() => test[1]);
+      jest.spyOn(global.window, "prompt").mockImplementation(() => test[1]);
       jest.spyOn(console, "log");
       f13();
       expect(console.log).toHaveBeenCalledTimes(1);
@@ -47,7 +47,7 @@ describe("f13", () => {
     ["test 6", ""],
   ].forEach((test) => {
     it(test[0], () => {
-      jest.spyOn(window, "prompt").mockImplementation(() => test[1]);
+      jest.spyOn(global.window, "prompt").mockImplementation(() => test[1]);
       jest.spyOn(console, "log");
       f13();
       expect(console.log).toHaveBeenCalledTimes(0);

@@ -22,7 +22,7 @@ describe("f22", () => {
     ["test 3", 12, "December"],
   ].forEach((test) => {
     it(test[0], () => {
-      jest.spyOn(window, "prompt").mockImplementation(() => test[1]);
+      jest.spyOn(global.window, "prompt").mockImplementation(() => test[1]);
       jest.spyOn(console, "log");
       f22();
       expect(console.log).toHaveBeenCalledWith(test[2]);

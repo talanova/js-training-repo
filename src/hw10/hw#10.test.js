@@ -68,7 +68,7 @@ describe("isDateEmailOrPhoneNumber", () => {
     ["test 3", "89215930353", "is phone number"],
   ].forEach((test) => {
     it(test[0], () => {
-      jest.spyOn(window, "prompt").mockImplementation(() => test[1]);
+      jest.spyOn(global.window, "prompt").mockImplementation(() => test[1]);
       jest.spyOn(console, "log");
       isDateEmailOrPhoneNumber();
       expect(console.log).toHaveBeenCalledWith(`"${test[1]}" ${test[2]}`);
@@ -80,7 +80,7 @@ describe("isDateEmailOrPhoneNumber", () => {
     ["test 11", "some text"],
   ].forEach((test) => {
     it(test[0], () => {
-      jest.spyOn(window, "prompt").mockImplementation(() => test[1]);
+      jest.spyOn(global.window, "prompt").mockImplementation(() => test[1]);
       jest.spyOn(console, "log");
       isDateEmailOrPhoneNumber();
       expect(console.log).toHaveBeenCalledTimes(0);

@@ -25,7 +25,7 @@ describe("getCircumferenceAndAreaOfCircle", () => {
     ["test 3", "3", ["18.85", "28.27"]],
   ].forEach((test) => {
     it(test[0], () => {
-      jest.spyOn(window, "prompt").mockImplementation(() => test[1]);
+      jest.spyOn(global.window, "prompt").mockImplementation(() => test[1]);
       jest.spyOn(console, "log");
       getCircumferenceAndAreaOfCircle();
       const [a, b] = test[2];
@@ -40,7 +40,9 @@ describe("getQuadraticEquationRoots", () => {
     ["test 2", ["1", "-3", "-4"], { x1: 4, x2: -1 }],
   ].forEach((test) => {
     it(test[0], () => {
-      jest.spyOn(window, "prompt").mockImplementation(() => test[1].shift());
+      jest
+        .spyOn(global.window, "prompt")
+        .mockImplementation(() => test[1].shift());
       expect(getQuadraticEquationRoots()).toStrictEqual(test[2]);
     });
   });

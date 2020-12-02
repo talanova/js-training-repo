@@ -8,7 +8,7 @@ describe("f41", () => {
       age: +age,
     };
 
-    jest.spyOn(window, "prompt").mockImplementation(() => age);
+    jest.spyOn(global.window, "prompt").mockImplementation(() => age);
     const user = f41();
     expect(user).toStrictEqual(expected);
   });
@@ -23,7 +23,7 @@ describe("f42", () => {
       role: "admin",
     };
 
-    jest.spyOn(window, "prompt").mockImplementation(() => age);
+    jest.spyOn(global.window, "prompt").mockImplementation(() => age);
     const user = f41();
     const admin = f42(user);
     expect(admin).toStrictEqual(expected);
