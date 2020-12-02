@@ -19,23 +19,27 @@ export function addForm(el) {
   button.innerText = "Click me!";
   button.style.margin = "4px";
   button.hidden = true;
-  button.addEventListener("click", () => {
+
+  function onClick() {
     addToOutput(outputField, inputField.value);
     inputField.value = "";
     button.hidden = true;
     cleanOutput(outputField);
-  });
+  }
+  button.addEventListener("click", onClick);
 
   inputField.className = "input-field";
   inputField.id = "input-field";
   inputField.style.margin = "4px";
-  inputField.addEventListener("input", () => {
+
+  function onInput() {
     if (inputField.value.length === 0) {
       button.hidden = true;
     } else {
       button.hidden = false;
     }
-  });
+  }
+  inputField.addEventListener("input", onInput);
 
   outputField.className = "output-field";
   for (let i = 0; i < 3; i++) {

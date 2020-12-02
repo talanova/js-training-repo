@@ -7,6 +7,9 @@
   <body>
     <div id="app"></div>
 
-    <script src="src/index.js"></script>
+    <script type="module">
+      import { addForm } from "./src/addForm.js";
+      addForm(document.getElementById("app"));
+    </script>
   </body>
 </html>
