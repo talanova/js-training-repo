@@ -17,11 +17,7 @@ export function getDayOfWeek(input) {
 
 export function getMinutesPassedInCurrentDay() {
   const date = new Date();
-
-  const midnight = new Date(date);
-  midnight.setHours(0, 0, 0, 0);
-
-  console.log(Math.floor((date - midnight) / 1000 / 60));
+  console.log(date.getHours() * 60 + date.getMinutes());
 }
 
 function getDateFromFormattedString(input) {
